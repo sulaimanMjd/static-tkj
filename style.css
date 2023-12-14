@@ -9,6 +9,7 @@ html {
 /* Variables
 ---------------------------*/
 :root {
+    --secondary-color: #1c2e2b;
     --main-color: #000;
     --color-dark: #333;
 
@@ -23,7 +24,9 @@ html {
 /* Bright Mode
 ---------------------------*/
 [data-user-color-scheme="light"] {
+    --secondary-alt: var(--secondary-color);
     --background-alt: var(--color-dark);
+    --secondary-alt: var(--secondary-color);
     --text-color: var(--color-text);
     --mode-icon: "🌕";
     --mode-icon-opacity: 0.85;
@@ -147,10 +150,10 @@ nav:hover {
 /* darkmode toogle */
 .toggleButton {
     padding: 0.4em 0.8em;
-    background-color: tomato;
+    background: #ffffff;
     border: none;
     border-radius: 50px;
-    color: var(--text-color);
+    color: #000000;
     cursor: pointer;
 }
 .toggleButton::before {

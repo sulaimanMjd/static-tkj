@@ -79,11 +79,13 @@ const toggleSetting = () => {
 };
 
 const setButtonLabel = currentSetting => {
-    modeToggleText.innerText = `Ganti mode ${
-        currentSetting === "dark"
-            ? document.documentElement.style.setProperty("--main-color", "#000")
-            : document.documentElement.style.setProperty("--main-color", "#fff")
-    }`;
+  if (currentSetting === "dark") {
+            (document.documentElement.style.setProperty("--main-color", "#000"))
+    
+  } else{
+             (document.documentElement.style.setProperty("--main-color", "#fff"))
+  }
+    modeToggleText.innerText = `Switch Theme`;
 };
 
 modeToggleButton.addEventListener("click", evt => {
