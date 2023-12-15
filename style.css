@@ -9,7 +9,6 @@ html {
 /* Variables
 ---------------------------*/
 :root {
-    --secondary-color: #1c2e2b;
     --main-color: #000;
     --color-dark: #333;
 
@@ -17,18 +16,22 @@ html {
 
     --color-mode: "dark";
     --mode-icon: "🌑";
+    --background-mode: black;
     --mode-icon-opacity: "1";
     --burger: #000;
+    --colorOfText: #fff;
+    --colorOfBar: #000;
 }
 
 /* Bright Mode
 ---------------------------*/
 [data-user-color-scheme="light"] {
-    --secondary-alt: var(--secondary-color);
     --background-alt: var(--color-dark);
-    --secondary-alt: var(--secondary-color);
     --text-color: var(--color-text);
     --mode-icon: "🌕";
+    --background-mode: white;
+    --colorOfText: #000;
+    --colorOfBar: #fff;
     --mode-icon-opacity: 0.85;
 }
 
@@ -92,7 +95,7 @@ nav:hover {
 .bar3 {
     width: 30px;
     height: 3px;
-    background-color: var(--main-color); /* Atur warna bar menjadi putih */
+    background-color: var(--colorOfBar); /* Atur warna bar menjadi putih */
     margin: 5px 0;
     transition: 0.4s;
 }
@@ -150,10 +153,10 @@ nav:hover {
 /* darkmode toogle */
 .toggleButton {
     padding: 0.4em 0.8em;
-    background: #ffffff;
     border: none;
     border-radius: 50px;
-    color: #000000;
+    background: var(--background-mode);
+    color: var(--colorOfText);
     cursor: pointer;
 }
 .toggleButton::before {
